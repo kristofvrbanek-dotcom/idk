@@ -19,12 +19,11 @@ export function SiteFooter() {
                 <Scissors className="h-4 w-4" />
               </span>
               <span className="font-display text-2xl leading-none text-foreground">
-                Salon&nbsp;Lipa
+                Argania&nbsp;studio
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Frizerski atelje za natančnost, mehkobo in tisto samozavest, ki s tabo odide skozi
-              vrata.
+              Frizerski studio v Ljubljani. Striženje, barvanje in nega las.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -54,26 +53,27 @@ export function SiteFooter() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span>
-                  Rožna ulica 248, št. 4<br />
+                  Grablovičeva ulica 54
+                  <br />
                   1000 Ljubljana
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <a href="tel:+38615123456" className="hover:text-foreground">
-                  051 234 567
+                <a href="tel:+38670806246" className="hover:text-foreground">
+                  070 806 246
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="h-4 w-4 shrink-0 text-primary" />
-                <span>Po dogovoru</span>
+                <span>Po predhodnem dogovoru</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-              Ure
+              Delovni čas
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {hours.map((h) => (
@@ -87,8 +87,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Salon Lipa. Vse pravice pridržane.</p>
-          <p>Z roko v roki za moderno žensko.</p>
+          <p>
+            © {new Date().getFullYear()} Argania studio, frizerske storitve, Jasminka Bašić s.p.
+          </p>
+          <p>Grablovičeva ulica 54, 1000 Ljubljana</p>
         </div>
       </div>
     </footer>

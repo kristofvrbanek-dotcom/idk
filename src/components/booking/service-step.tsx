@@ -22,9 +22,9 @@ export function ServiceStep({
 }) {
   return (
     <div>
-      <h2 className="font-display text-3xl text-foreground">Izberi storitev</h2>
+      <h2 className="font-display text-3xl text-foreground">Izberite storitev</h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Tri storitve s podpisom, vsaka prilagojena tvojim lasom.
+        Najprej izberite storitev, nato še trajanje.
       </p>
 
       <div className="mt-7 grid gap-4 sm:grid-cols-3">
@@ -69,7 +69,7 @@ export function ServiceStep({
       {selectedService && (
         <div className="mt-9">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Izberi čas v stolu
+            Izberite trajanje
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             {selectedService.durations.map((d) => {
@@ -105,7 +105,7 @@ export function ServiceStep({
               onClick={onContinue}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
             >
-              Nadaljuj na datum in čas
+              Naprej: datum in ura
               <ArrowRight className="h-4 w-4" />
             </button>
           </div>

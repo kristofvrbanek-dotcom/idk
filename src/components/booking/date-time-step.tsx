@@ -31,9 +31,9 @@ export function DateTimeStep({
 }) {
   return (
     <div>
-      <h2 className="font-display text-3xl text-foreground">Izberi datum in čas</h2>
+      <h2 className="font-display text-3xl text-foreground">Izberite datum in uro</h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Prosti termini iz našega koledarja. Izberi dan, da vidiš proste čase v stolu.
+        Izberite dan in prikazali se bodo prosti termini.
       </p>
 
       <div className="mt-7 grid gap-8 md:grid-cols-2">
@@ -64,7 +64,7 @@ export function DateTimeStep({
               </p>
               {timesForDate.length === 0 ? (
                 <p className="mt-6 text-sm text-muted-foreground">
-                  Na ta dan ni več prostih časov. Poskusi z drugim datumom.
+                  Ta dan ni prostih terminov. Izberite drug datum.
                 </p>
               ) : (
                 <div className="mt-4 grid max-h-64 grid-cols-2 gap-2.5 overflow-y-auto pr-1 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3">
@@ -91,7 +91,7 @@ export function DateTimeStep({
           ) : (
             <div className="flex h-full min-h-64 flex-col items-center justify-center text-center text-sm text-muted-foreground">
               <Sparkles className="mb-3 h-6 w-6 text-primary/60" />
-              Izberi datum, da vidiš proste termine.
+              Izberite datum za prikaz prostih terminov.
             </div>
           )}
         </div>
@@ -112,7 +112,7 @@ export function DateTimeStep({
           onClick={onContinue}
           className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
         >
-          Nadaljuj na podatke
+          Naprej: vaši podatki
           <ArrowRight className="h-4 w-4" />
         </button>
       </div>

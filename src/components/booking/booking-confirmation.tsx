@@ -23,28 +23,28 @@ export function BookingConfirmation({
           <Check className="h-7 w-7" />
         </span>
         <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-          Tvoj stol je rezerviran
+          Termin je rezerviran
         </p>
         <h1 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-          Se vidimo kmalu, lepotica.
+          Hvala, se vidimo kmalu!
         </h1>
         <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
-          Potrditev smo ti poslali v nabiralnik. Če se kaj spremeni, nas samo pokliči — tvoj termin
-          držimo z 24-urnim oknom za prestavljanje.
+          Potrditev ste prejeli po e-pošti. Če boste termin morali prestaviti, me pokličite vsaj 24
+          ur prej.
         </p>
 
         <div className="mt-9 rounded-2xl border border-border/60 bg-background/60 p-6 text-left">
           <div className="grid gap-4 sm:grid-cols-2">
             <ConfirmItem label="Storitev" value={service.name} />
             <ConfirmItem
-              label="Čas v stolu"
+              label="Trajanje"
               value={`${duration.label} · ${formatMinutes(duration.minutes)}`}
             />
             <ConfirmItem label="Datum" value={date ? formatDateLong(date) : "—"} />
-            <ConfirmItem label="Čas" value={formatTime(slot)} />
+            <ConfirmItem label="Ura" value={formatTime(slot)} />
           </div>
           <div className="mt-5 flex items-center justify-between border-t border-border/60 pt-5">
-            <span className="text-sm text-muted-foreground">Skupaj</span>
+            <span className="text-sm text-muted-foreground">Cena</span>
             <span className="font-display text-2xl text-primary">
               {formatPrice(duration.price)}
             </span>
@@ -57,14 +57,14 @@ export function BookingConfirmation({
             onClick={onReset}
             className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Rezerviraj še eno
+            Rezervirajte nov termin
             <ArrowRight className="h-4 w-4" />
           </button>
           <a
-            href="tel:+38615123456"
+            href="tel:+38670806246"
             className="inline-flex items-center rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent/40"
           >
-            Pokliči 051 234 567
+            Pokličite 070 806 246
           </a>
         </div>
       </div>

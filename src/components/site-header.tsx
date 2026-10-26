@@ -5,7 +5,7 @@ import { Menu, Scissors, X } from "lucide-react";
 const navItems = [
   { label: "Domov", to: "/" },
   { label: "Storitve", to: "/services" },
-  { label: "O nas", to: "/about" },
+  { label: "O studiu", to: "/about" },
 ] as const;
 
 export function SiteHeader() {
@@ -14,12 +14,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
-        <Link to="/" className="flex items-center gap-2.5" aria-label="Salon Lipa domov">
+        <Link to="/" className="flex items-center gap-2.5" aria-label="Argania studio – domov">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <Scissors className="h-4 w-4" />
           </span>
           <span className="font-display text-2xl leading-none text-foreground">
-            Salon&nbsp;Lipa
+            Argania&nbsp;studio
           </span>
         </Link>
 
@@ -41,7 +41,7 @@ export function SiteHeader() {
             to="/book"
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:inline-flex"
           >
-            Rezerviraj
+            Rezervacija
           </Link>
           <button
             type="button"
@@ -78,7 +78,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
             >
-              Rezerviraj
+              Rezervacija
             </Link>
           </nav>
         </div>

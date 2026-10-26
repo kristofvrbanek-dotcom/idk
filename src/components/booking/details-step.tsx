@@ -34,9 +34,9 @@ export function DetailsStep({
 
   return (
     <form onSubmit={onSubmit}>
-      <h2 className="font-display text-3xl text-foreground">Tvoji podatki</h2>
+      <h2 className="font-display text-3xl text-foreground">Vaši podatki</h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Da zadržimo tvoj stol in ti pošljemo potrditev.
+        Potrebujem jih za rezervacijo termina in pošiljanje potrditve.
       </p>
 
       <div className="mt-7 grid gap-5 sm:grid-cols-2">
@@ -69,7 +69,7 @@ export function DetailsStep({
             type="email"
             value={values.email}
             onChange={(e) => onChange.email(e.target.value)}
-            placeholder="mojca@pošta.si"
+            placeholder="mojca@primer.si"
             required
             autoComplete="email"
           />
@@ -89,12 +89,12 @@ export function DetailsStep({
       </div>
 
       <div className="mt-5 space-y-2">
-        <Label htmlFor="notes">Opomba za frizersko (neobvezno)</Label>
+        <Label htmlFor="notes">Opomba (neobvezno)</Label>
         <textarea
           id="notes"
           value={values.notes}
           onChange={(e) => onChange.notes(e.target.value)}
-          placeholder="Še kaj, kar naj vemo pred tvojim obiskom?"
+          placeholder="Je še kaj, kar naj vem pred vašim obiskom?"
           className="flex min-h-[96px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
         />
       </div>
@@ -120,7 +120,7 @@ export function DetailsStep({
             </>
           ) : (
             <>
-              Potrdi rezervacijo
+              Potrdite rezervacijo
               <ArrowRight className="h-4 w-4" />
             </>
           )}

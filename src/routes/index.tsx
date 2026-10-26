@@ -1,21 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Star, Sparkles, MapPin, Clock } from "lucide-react";
-import { services, formatPrice, formatMinutes } from "@/lib/service-data";
+import { services, formatPrice } from "@/lib/service-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Salon Lipa — frizerski atelje za moderno žensko" },
+      { title: "Argania studio — frizerski studio v Ljubljani" },
       {
         name: "description",
         content:
-          "Salon Lipa je frizerski atelje za natančne striže, »lived-in« barvo in luksuzne tretmaje. Rezerviraj termin v srcu Ljubljane.",
+          "Argania studio je frizerski studio v Ljubljani. Striženje, barvanje in nega las. Rezervirajte termin na spletu.",
       },
-      { property: "og:title", content: "Salon Lipa — frizerski atelje za moderno žensko" },
+      { property: "og:title", content: "Argania studio — frizerski studio v Ljubljani" },
       {
         property: "og:description",
         content:
-          "Natančne striže, »lived-in« barvo in luksuzne tretmaje — Salon Lipa, frizerski atelje v Ljubljani. Rezerviraj termin še danes.",
+          "Striženje, barvanje in nega las v Argania studiu v Ljubljani. Rezervirajte termin na spletu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -36,22 +36,22 @@ const stylistImage =
 const galleryImages = [
   {
     src: "https://vibe.filesafe.space/1792471744635170663/assets/e699c019-9546-4999-845e-df4e5463d09c.png",
-    alt: "Sveža natančna bob pričeska, oblikovana v Salon Lipa",
+    alt: "Bob pričeska",
     span: "md:col-span-2 md:row-span-2",
   },
   {
     src: "https://vibe.filesafe.space/1792471744635170663/assets/da199502-a8ce-4f18-8a70-d55c26b716ab.png",
-    alt: "Mehki ročno naslikani balayage valovi",
+    alt: "Mehki valovi z balayage barvanjem",
     span: "",
   },
   {
     src: "https://vibe.filesafe.space/1792471744635170663/assets/6d046731-c34c-4a87-ac20-f21908200673.png",
-    alt: "Detajl sijočih blond poudarkov",
+    alt: "Sijoči blond prameni",
     span: "",
   },
   {
     src: "https://vibe.filesafe.space/1792471744635170663/assets/a315eeee-78c4-43ee-aa8e-930e3c11c01b.png",
-    alt: "Frizerska oblikuje lase gostje",
+    alt: "Frizerka oblikuje lase stranki",
     span: "md:col-span-2",
   },
 ];
@@ -61,19 +61,19 @@ const testimonials = [
     quote:
       "Nikoli še nisem bila bolj sama pri sebi, ko sem stopila iz salona. Lipa me je poslušala — in mi dala strižo, ki je nisem znala prositi.",
     name: "Mariana D.",
-    detail: "Striža s podpisom",
+    detail: "Striženje",
   },
   {
     quote:
       "Balayage zraste tako mehko, da stalno pozabim, da bi morala nazaj. To je tista čarovnija. (Seveda pa vseeno pridem.)",
     name: "Priya S.",
-    detail: "Barva za vsak dan",
+    detail: "Barvanje",
   },
   {
     quote:
       "Po ostri zimi mi je Ritual vrnil lase v življenje. Masaža lasišča je sama po sebi vredna cene.",
     name: "Eloise T.",
-    detail: "Ritual",
+    detail: "Nega las",
   },
 ];
 
@@ -86,30 +86,30 @@ function Index() {
           <div className="order-2 lg:order-1">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               <Sparkles className="h-3.5 w-3.5" />
-              Frizerski atelje · Ljubljana
+              Frizerski studio · Ljubljana
             </span>
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-              Lase, ki
+              Lasje, v katerih
               <br />
-              <span className="text-primary">diši kot ti.</span>
+              <span className="text-primary">se dobro počutite.</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Salon Lipa je frizerski atelje za natančne striže, »lived-in« barvo in počasen luksuz
-              biti skrbno negovana. Pridi zaradi las. Ostani zaradi miru.
+              V Argania studiu vas čaka striženje, barvanje in nega las brez hitenja. Vzamem si čas,
+              da skupaj najdeva pričesko, ki vam ustreza.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 to="/book"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Rezerviraj termin
+                Rezervirajte termin
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent/40"
               >
-                Razišči storitve
+                Storitve in cene
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
@@ -119,11 +119,11 @@ function Index() {
               </span>
               <span className="inline-flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                Rožna ulica, Ljubljana
+                Grablovičeva ulica 54, Ljubljana
               </span>
               <span className="inline-flex items-center gap-2">
                 <Clock className="h-4 w-4 text-primary" />
-                Po dogovoru
+                Po predhodnem dogovoru
               </span>
             </div>
           </div>
@@ -136,14 +136,14 @@ function Index() {
               <div className="overflow-hidden rounded-[2rem] border border-border/60 shadow-xl">
                 <img
                   src={heroImage}
-                  alt="Ženska z glamorous, voluminoznimi salonskimi lasmi"
+                  alt="Ženska z bujnimi, valovitimi lasmi"
                   className="aspect-[3/4] w-full object-cover"
                   loading="eager"
                 />
               </div>
               <div className="absolute -bottom-5 -left-3 hidden rounded-2xl border border-border bg-card/90 p-4 shadow-lg backdrop-blur sm:block">
                 <p className="font-display text-2xl text-foreground">12 let</p>
-                <p className="text-xs text-muted-foreground">umetnosti</p>
+                <p className="text-xs text-muted-foreground">izkušenj</p>
               </div>
             </div>
           </div>
@@ -156,30 +156,28 @@ function Index() {
           <div className="overflow-hidden rounded-[1.75rem] border border-border/60">
             <img
               src={interiorImage}
-              alt="Topel, rožnato obarvan interier Salona Lipa"
+              alt="Notranjost frizerskega studia"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Naša filozofija
+              O studiu
             </p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-              Salon naj bo
-              <br />
-              mehko mesto za pristanek.
+              Majhen studio, <br /> oseben pristop.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Verjamemo, da je striža tudi vrsta počitka. Zato smo zgradili sobo z dobrim stikalom,
-              toplimi toni in frizerkami, ki resnično poslušajo — in potem sproti dale lase, ki
-              izgleda nežno in drži. Brez hitenja, brez prepričevanja. Samo ti, negovana.
+              Vsak obisk se začne s pogovorom. Povejte mi, kaj si želite in koliko časa zjutraj
+              namenite urejanju las. Nato vam predlagam pričesko, ki vam bo ustrezala in jo boste
+              zlahka uredili tudi doma. Brez hitenja in brez vsiljevanja.
             </p>
             <Link
               to="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
             >
-              Preberi našo zgodbo
+              Več o studiu
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -190,9 +188,11 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Meni</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+              Storitve
+            </p>
             <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">
-              Oblikovano za tvoje lase
+              Kaj vam lahko ponudim
             </h2>
           </div>
           <Link
@@ -247,14 +247,16 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Delo</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                Navdih
+              </p>
               <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">
-                Malo navdiha
+                Ideje za novo pričesko
               </h2>
             </div>
             <p className="max-w-sm text-sm text-muted-foreground">
-              Striže, barva in oblikovanje iz naših stolov — tisti lase, ki ga screenshotaš in
-              prineseš s seboj.
+              Striženje, barvanje in oblikovanje. Če vam je kakšna pričeska všeč, mi sliko pokažite
+              ob obisku.
             </p>
           </div>
           <div className="mt-10 grid auto-rows-[12rem] grid-cols-2 gap-4 md:grid-cols-4 md:auto-rows-[14rem]">
@@ -281,22 +283,21 @@ function Index() {
           <div className="order-2 overflow-hidden rounded-[2rem] border border-border/60 lg:order-1">
             <img
               src={ritualImage}
-              alt="Sijoč, zdrav lase po tretmaju v Salon Lipa"
+              alt="Sijoči, zdravi lasje po negi"
               className="aspect-square w-full object-cover"
               loading="lazy"
             />
           </div>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Ritual</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+              Nega las
+            </p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-              Ura čistega
-              <br />
-              povrnitve.
+              Nega za <br /> utrujene lase.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Naš restavrativni tretma je manj storitev in bolj majhna dobrotita zasebi — globoko
-              kondicioniranje, terapija lasišča in zapečaten finish, ki utrujenim lasu vrne mehko,
-              sijoče življenje.
+              Globinska nega, masaža lasišča in skrbno sušenje. Primerna je za suhe, poškodovane ali
+              barvane lase, ki potrebujejo več vlage in sijaja.
             </p>
             <ul className="mt-6 space-y-2.5 text-sm text-muted-foreground">
               {(services[2]?.includes ?? []).map((item) => (
@@ -313,7 +314,7 @@ function Index() {
               search={{ service: "the-ritual" }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Rezerviraj Ritual · od {formatPrice(services[2]?.durations[0]?.price ?? 0)}
+              Rezervirajte nego · od {formatPrice(services[2]?.durations[0]?.price ?? 0)}
             </Link>
           </div>
         </div>
@@ -324,10 +325,10 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Lepa beseda
+              Mnenja strank
             </p>
             <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">
-              V ljubezni z rednimi gostjami
+              Kaj pravijo stranke
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -365,29 +366,26 @@ function Index() {
             aria-hidden
             className="absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-white/10 blur-3xl"
           />
-          <p className="text-xs font-semibold uppercase tracking-[0.22em]">Tvoj stol te čaka</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em]">Rezervacija</p>
           <h2 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">
-            Naredimo, da se v
-            <br />
-            lastnih lasih počutiš kot doma.
+            Rezervirajte <br /> svoj termin.
           </h2>
           <p className="mx-auto mt-5 max-w-lg text-base text-primary-foreground/85">
-            {formatMinutes(60)} seje, šest dni v tednu. Izberi storitev in čas — za vse ostalo
-            poskrbimo mi.
+            Izberite storitev in prost termin na spletu ali me pokličite.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/book"
               className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3.5 text-sm font-semibold text-primary transition-opacity hover:opacity-90"
             >
-              Rezerviraj zdaj
+              Rezervirajte zdaj
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="tel:+38615123456"
+              href="tel:+38670806246"
               className="inline-flex items-center rounded-full border border-primary-foreground/40 px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-white/10"
             >
-              Pokliči 051 234 567
+              Pokličite 070 806 246
             </a>
           </div>
         </div>
@@ -398,7 +396,7 @@ function Index() {
         <div className="overflow-hidden rounded-[2rem] border border-border/60">
           <img
             src={stylistImage}
-            alt="Frizerska v Salon Lipa oblikuje lase gostje"
+            alt="Frizerka oblikuje lase stranki"
             className="aspect-[4/3] w-full object-cover"
             loading="lazy"
           />

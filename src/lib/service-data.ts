@@ -24,42 +24,42 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "signature-cut",
-    name: "Izreži s podpisom",
-    tagline: "Natančna striža in stil",
+    name: "Striženje",
+    tagline: "Striženje in oblikovanje",
     description:
-      "Strižemo po obrazu, teksturi in načinu, kako nosiš lase — vsako rezlico. Začnemo s pogovorom, končamo pa s pričesko, ki jo doma nežno ponoviš.",
+      "Striženje, prilagojeno obliki obraza, strukturi las in vašemu vsakdanu. Začneva s posvetom, končava z oblikovanjem in nasveti, kako pričesko urediti doma.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/e699c019-9546-4999-845e-df4e5463d09c.png",
     calendarId: "zcSaUB20E0hanvdDYHKZ",
     durations: [
-      { id: "cut-45", label: "Hitra osvežitev", minutes: 45, price: 75 },
-      { id: "cut-75", label: "Striža s podpisom", minutes: 75, price: 120 },
+      { id: "cut-45", label: "Osvežitev pričeske", minutes: 45, price: 75 },
+      { id: "cut-75", label: "Striženje", minutes: 75, price: 120 },
       {
         id: "cut-105",
-        label: "Striža in stil",
+        label: "Striženje in oblikovanje",
         minutes: 105,
         price: 165,
       },
     ],
     includes: [
-      "Posvet v stolu",
+      "Posvet",
       "Umivanje in masaža lasišča",
-      "Natančna striža",
+      "Striženje",
       "Oblikovanje in nasveti za doma",
     ],
   },
   {
     id: "lived-in-color",
-    name: "Barva za vsak dan",
-    tagline: "Balayage in dimenzionalno barvanje",
+    name: "Barvanje",
+    tagline: "Balayage in barvanje las",
     description:
-      "Ročno nanašamo toplo, »lived-in« barvo, ki nežno zraste iz narave. Dimenzijo zgradimo okrog tvojega tona, da meja med naravno in naslikano postane sijaj.",
+      "Naravni prehodi barve, ki lepo zrastejo in ne zahtevajo pogostega obnavljanja. Odtenek izbereva skupaj glede na vašo naravno barvo in polt.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/da199502-a8ce-4f18-8a70-d55c26b716ab.png",
     calendarId: "nJBezo5OzBQplg8jzXzb",
     durations: [
-      { id: "color-60", label: "Koreninski nanos", minutes: 60, price: 90 },
-      { id: "color-90", label: "Gloss in toniranje", minutes: 90, price: 150 },
+      { id: "color-60", label: "Barvanje izrastka", minutes: 60, price: 90 },
+      { id: "color-90", label: "Toniranje in sijaj", minutes: 90, price: 150 },
       {
         id: "color-120",
         label: "Balayage in toniranje",
@@ -68,37 +68,37 @@ export const services: Service[] = [
       },
     ],
     includes: [
-      "Barvni posvet",
-      "Ročni nanos",
-      "Gloss in toniranje",
-      "Bond nega",
+      "Posvet o barvi",
+      "Nanos barve",
+      "Toniranje",
+      "Nega za zaščito las",
       "Oblikovanje pričeske",
     ],
   },
   {
     id: "the-ritual",
-    name: "Ritual",
-    tagline: "Luksuzno restavrativno pakiranje",
+    name: "Nega las",
+    tagline: "Globinska nega in obnova",
     description:
-      "Počasna, restavrativna ura za lase, ki potrebuje nežnost. Globoko kondicioniranje, terapija lasišča in zapečaten finish, ki dlake pusti mehke, sijoče in odporne.",
+      "Za suhe, poškodovane ali barvane lase. Globinska nega, masaža lasišča in skrbno sušenje vrnejo lasem mehkobo in sijaj.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/6d046731-c34c-4a87-ac20-f21908200673.png",
     calendarId: "GODrhmBDRdxGIPyPUmju",
     durations: [
-      { id: "ritual-45", label: "Hitri ritual", minutes: 45, price: 55 },
-      { id: "ritual-60", label: "Bond ritual", minutes: 60, price: 95 },
+      { id: "ritual-45", label: "Hitra nega", minutes: 45, price: 55 },
+      { id: "ritual-60", label: "Obnovitvena nega", minutes: 60, price: 95 },
       {
         id: "ritual-90",
-        label: "Ritual s keratinom",
+        label: "Nega s keratinom",
         minutes: 90,
         price: 150,
       },
     ],
     includes: [
-      "Dijagnoza lasišča",
-      "Globoka maska",
-      "Para hidracija",
-      "Bond ali keratin nanos",
+      "Pregled lasišča",
+      "Globinska maska",
+      "Vlaženje s paro",
+      "Obnovitveni ali keratinski nanos",
       "Sušenje in oblikovanje",
     ],
   },

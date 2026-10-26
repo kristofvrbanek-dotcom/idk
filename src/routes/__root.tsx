@@ -20,16 +20,16 @@ function NotFoundComponent() {
     <div className="flex min-h-[60vh] items-center justify-center px-4 py-24">
       <div className="max-w-md text-center">
         <p className="font-display text-7xl text-primary">404</p>
-        <h2 className="mt-4 text-2xl text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-2xl text-foreground">Stran ne obstaja</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          Stran, ki jo iščete, ne obstaja ali je bila premaknjena.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Back to home
+            Na domačo stran
           </Link>
         </div>
       </div>
@@ -48,10 +48,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-[60vh] items-center justify-center px-4 py-24">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Stran se ni naložila
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Prišlo je do napake. Poskusite znova ali se vrnite na domačo stran.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -61,13 +61,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Try again
+            Poskusite znova
           </button>
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent/40"
           >
-            Go home
+            Na domačo stran
           </Link>
         </div>
       </div>
@@ -80,18 +80,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Salon Lipa — frizerski atelje za moderno žensko" },
+      { title: "Argania studio — frizerski studio v Ljubljani" },
       {
         name: "description",
         content:
-          "Salon Lipa je frizerski atelje za natančne striže, »lived-in« barvo in luksuzne tretmaje. Rezerviraj termin še danes.",
+          "Argania studio je frizerski studio v Ljubljani. Striženje, barvanje in nega las. Rezervirajte termin na spletu.",
       },
-      { name: "author", content: "Salon Lipa" },
-      { property: "og:title", content: "Salon Lipa — frizerski atelje za moderno žensko" },
+      { name: "author", content: "Argania studio" },
+      { property: "og:title", content: "Argania studio — frizerski studio v Ljubljani" },
       {
         property: "og:description",
         content:
-          "Natančne striže, »lived-in« barvo in luksuzne tretmaje — Salon Lipa, frizerski atelje v Ljubljani. Rezerviraj termin še danes.",
+          "Striženje, barvanje in nega las v Argania studiu v Ljubljani. Rezervirajte termin na spletu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

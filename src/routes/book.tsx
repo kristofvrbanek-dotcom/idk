@@ -35,20 +35,20 @@ export const Route = createFileRoute("/book")({
       .parse(search),
   head: () => ({
     meta: [
-      { title: "Rezerviraj termin — Salon Lipa frizerski atelje" },
+      { title: "Rezervacija termina — Argania studio" },
       {
         name: "description",
         content:
-          "Rezerviraj termin v Salon Lipa. Izberi storitev in čas v stolu, izberi prost termin in shrani svoj obisk v nekaj sekundah.",
+          "Rezervirajte termin v Argania studiu: izberite storitev, trajanje in prost termin.",
       },
       {
         property: "og:title",
-        content: "Rezerviraj termin — Salon Lipa frizerski atelje",
+        content: "Rezervacija termina — Argania studio",
       },
       {
         property: "og:description",
         content:
-          "Zadrži svoj obisk v Salon Lipa — izberi storitev, izberi prost termin in rezerviraj online.",
+          "Rezervirajte termin v Argania studiu: izberite storitev, trajanje in prost termin.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/book")({
 const steps = [
   { n: 1, label: "Storitev" },
   { n: 2, label: "Datum in čas" },
-  { n: 3, label: "Tvoji podatki" },
+  { n: 3, label: "Vaši podatki" },
 ];
 
 function BookPage() {
@@ -191,7 +191,7 @@ function BookPage() {
             last_name: "Priimek",
             email: "E-pošta",
             phone: "Telefon",
-            calendar_notes: "Opomba za frizersko",
+            calendar_notes: "Opomba",
           },
           url: window.location.href,
           title: document.title,
@@ -216,7 +216,7 @@ function BookPage() {
             },
             [CHAIR_TIME_FIELD_ID]: {
               value: `${selectedDuration.label} · ${selectedDuration.minutes} min`,
-              label: "Čas v stolu",
+              label: "Trajanje",
             },
           },
         },
@@ -225,8 +225,8 @@ function BookPage() {
       setConfirmed(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
-      toast.error("Nekaj je šlo narobe pri rezervaciji.", {
-        description: "Poskusi znova ali nas pokliči na 051 234 567.",
+      toast.error("Rezervacija ni uspela.", {
+        description: "Poskusite znova ali me pokličite na 070 806 246.",
       });
     } finally {
       setSubmitting(false);
@@ -260,14 +260,13 @@ function BookPage() {
       <section className="border-b border-border/60 bg-secondary/30">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            Rezerviraj svoj stol
+            Spletna rezervacija
           </p>
           <h1 className="mt-4 font-display text-5xl leading-tight text-foreground sm:text-6xl">
-            Zadrži svoj obisk
+            Rezervirajte termin
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Izberi storitev, izberi prost termin in pripravili bomo čaj. Šest dni v tednu, po
-            dogovoru.
+            Izberite storitev, trajanje in prost termin. Potrditev prejmete po e-pošti.
           </p>
 
           <ol className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">

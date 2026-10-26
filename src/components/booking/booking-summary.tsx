@@ -17,7 +17,7 @@ export function BookingSummary({
 }) {
   return (
     <div className="overflow-hidden rounded-[2rem] border border-border/60 bg-secondary/40 p-7">
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Tvoj termin</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Vaš termin</p>
       <div className="mt-6 space-y-5">
         <SummaryRow
           label="Storitev"
@@ -25,7 +25,7 @@ export function BookingSummary({
           icon={<Scissors className="h-4 w-4" />}
         />
         <SummaryRow
-          label="Čas v stolu"
+          label="Trajanje"
           value={
             selectedDuration
               ? `${selectedDuration.label} · ${formatMinutes(selectedDuration.minutes)}`
@@ -39,7 +39,7 @@ export function BookingSummary({
           icon={<Sparkles className="h-4 w-4" />}
         />
         <SummaryRow
-          label="Čas"
+          label="Ura"
           value={selectedSlot ? formatTime(selectedSlot) : undefined}
           icon={<Clock className="h-4 w-4" />}
         />
@@ -59,7 +59,7 @@ export function BookingSummary({
         </p>
         <p className="flex items-center gap-2">
           <MapPin className="h-4 w-4 text-primary" />
-          Rožna ulica 248, Ljubljana
+          Grablovičeva ulica 54, Ljubljana
         </p>
         <p className="flex items-center gap-2">
           <Clock className="h-4 w-4 text-primary" />

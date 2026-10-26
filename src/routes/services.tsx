@@ -5,20 +5,18 @@ import { services, formatPrice, formatMinutes, type Service } from "@/lib/servic
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Storitve in cene — Salon Lipa frizerski atelje" },
+      { title: "Storitve in cene — Argania studio" },
       {
         name: "description",
-        content:
-          "Storitve in cene Salona Lipa: natančne striže, »lived-in« balayage barva in restavrativni Ritual. Pri vsaki storitvi tri trajanja.",
+        content: "Storitve in cene v Argania studiu: striženje, barvanje in nega las.",
       },
       {
         property: "og:title",
-        content: "Storitve in cene — Salon Lipa frizerski atelje",
+        content: "Storitve in cene — Argania studio",
       },
       {
         property: "og:description",
-        content:
-          "Natančne striže, »lived-in« barva in Ritual — pri vsaki storitvi tri možna trajanja v Salon Lipa.",
+        content: "Striženje, barvanje in nega las v Argania studiu v Ljubljani.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -33,18 +31,18 @@ function ServicesPage() {
       {/* Header */}
       <section className="border-b border-border/60 bg-secondary/30">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Meni</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Storitve</p>
           <h1 className="mt-4 font-display text-5xl leading-tight text-foreground sm:text-6xl">
-            Storitve &amp; cene
+            Storitve in cene
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Vsaka storitev se začne s posvetom in konča z lasmi, s katerimi resnično lahko živiš.
-            Izberi trajanje, ki ustreza tvojemu dnevu — čas v stolu bomo prilagodili tvojim lasom.
+            Vsaka storitev se začne s kratkim posvetom. Izberite trajanje, ki vam ustreza, čas pa
+            bom prilagodila vašim lasem.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-2">
               <Scissors className="h-4 w-4 text-primary" />
-              Posvet vključeno
+              Posvet je vključen
             </span>
             <span className="inline-flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
@@ -73,15 +71,15 @@ function ServicesPage() {
             {[
               {
                 title: "Posveti",
-                body: "Vsaka barva in striža se začne s pogovorom. Nov v barvi? Vprašaj za 15-minutni predhodni posvet — je brezplačen.",
+                body: "Vsako barvanje in striženje se začne s pogovorom. Če barvate prvič, lahko rezervirate brezplačen 15-minutni posvet.",
               },
               {
-                title: "Polog",
-                body: "25-odstotni polog drži termine za barvo in balayage, vračljiv ob prihodu ali z 24-urnim obvestilom. Striže držimo s kartico pri roki.",
+                title: "Odpoved termina",
+                body: "Če termina ne morete izkoristiti, ga prosim odpovejte ali prestavite vsaj 24 ur prej.",
               },
               {
                 title: "Prihod",
-                body: "Pridi s čistimi, suhimi lasmi in desetimi minutami za umirjenost. Za vse ostalo poskrbimo mi — tudi za čaj.",
+                body: "Pridite s čistimi in suhimi lasmi ter nekaj minut pred terminom.",
               },
             ].map((p) => (
               <div key={p.title}>
@@ -94,13 +92,13 @@ function ServicesPage() {
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-3 rounded-[1.5rem] border border-border/60 bg-card p-8 text-center sm:flex-nowrap">
             <p className="flex-1 self-center text-lg text-foreground">
-              Ne veš, katera storitev ti ustreza? Pomagamo ti izbrati.
+              Ne veste, katero storitev izbrati? Pomagam vam pri izbiri.
             </p>
             <Link
               to="/book"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Rezerviraj posvet
+              Rezervirajte posvet
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -146,7 +144,7 @@ function ServiceBlock({ service, reversed }: { service: Service; reversed: boole
 
         <div className="mt-8 rounded-[1.25rem] border border-border/60 bg-card p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Izberi čas v stolu
+            Izberite trajanje
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             {service.durations.map((d) => (
@@ -165,7 +163,7 @@ function ServiceBlock({ service, reversed }: { service: Service; reversed: boole
                   {formatPrice(d.price)}
                 </span>
                 <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-foreground transition-colors group-hover:text-primary">
-                  Rezerviraj ta čas
+                  Rezervirajte
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </Link>

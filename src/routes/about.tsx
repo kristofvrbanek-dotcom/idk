@@ -4,17 +4,15 @@ import { ArrowRight, Heart, Leaf, Sparkles } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Naša zgodba — Salon Lipa frizerski atelje" },
+      { title: "O studiu — Argania studio" },
       {
         name: "description",
-        content:
-          "Zgodba, filozofija in ekipa Salona Lipa — frizerski atelje v Ljubljani, zgrajen na poslušanju, obrtništvu in tihem luksuzu.",
+        content: "Spoznajte Argania studio, frizerski studio Jasminke Bašić v Ljubljani.",
       },
-      { property: "og:title", content: "Naša zgodba — Salon Lipa frizerski atelje" },
+      { property: "og:title", content: "O studiu — Argania studio" },
       {
         property: "og:description",
-        content:
-          "Spoznaj ekipo in filozofijo Salona Lipa — frizerski atelje, zgrajen na poslušanju, obrtništvu in tihem luksuzu.",
+        content: "Spoznajte Argania studio, frizerski studio Jasminke Bašić v Ljubljani.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -31,36 +29,26 @@ const stylistImage =
 const values = [
   {
     icon: Heart,
-    title: "Najprej poslušamo",
-    body: "Začnemo s tvojo lasno zgodovino, navadami in tistim, kar resnično želiš. Striža sledi pogovoru.",
+    title: "Najprej poslušam",
+    body: "Začneva s pogovorom o vaših laseh, navadah in željah. Striženje sledi pogovoru.",
   },
   {
     icon: Sparkles,
-    title: "Obrtništvo, ki drži",
-    body: "Izurjene roke, dobri izdelki in pričeske, ki jih doma ponoviš — lase, ki je videti namerno tretji dan, ne le prvega.",
+    title: "Skrbno delo",
+    body: "Kakovostni izdelki in pričeska, ki jo zlahka uredite tudi doma in je lepa tudi tretji dan, ne le prvi.",
   },
   {
     icon: Leaf,
-    title: "Nežno kot privzeto",
-    body: "Barva z nizko vsebnostjo amoniaka, vgrajena bond nega in soba polna rastlin. Bolje za tvoje lase — in za zrak.",
+    title: "Nežno do las",
+    body: "Lase obravnavam nežno in izbiram izdelke, ki jih po nepotrebnem ne obremenjujejo.",
   },
 ];
 
 const team = [
   {
-    name: "Lipa Marais",
-    role: "Ustanoviteljica in mojstrica striže",
-    bio: "Dvajset let za stola in še vedno zaljubljena v dober posvet. Lipa je salon zgradila na enem pravilu: gostja naj se nikoli ne počuti v naglici.",
-  },
-  {
-    name: "Noor Adeyemi",
-    role: "Višja koloristka",
-    bio: "Noor naslika balayage kot akvarel — mehko, »lived-in« in odporljivo na zraslost. Izšolana v Londonu, ukoreninjena v Ljubljani.",
-  },
-  {
-    name: "Sofia Lin",
-    role: "Frizerska in vodja tretmajev",
-    bio: "Sofia vodi Ritual: terapija lasišča, bond nega in tisto oblikovanje, zaradi katerega naslednji termin naročiš že na poti ven.",
+    name: "Jasminka Bašić",
+    role: "Lastnica in frizerka",
+    bio: "Jasminka vodi Argania studio. Pri njej vas čakata oseben pristop in dovolj časa za pogovor o tem, kaj si želite.",
   },
 ];
 
@@ -72,22 +60,20 @@ function AboutPage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:items-center lg:py-24">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Naša zgodba
+              O studiu
             </p>
             <h1 className="mt-4 font-display text-5xl leading-[0.95] text-foreground sm:text-6xl">
-              Salon, zgrajen
-              <br />
-              <span className="text-primary">na poslušanju.</span>
+              Studio, kjer <br /> <span className="text-primary">si vzamem čas.</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Salon Lipa je nastal leta 2014 z enim stolom, izposojenim umivalnikom in trdovratnim
-              prepričanjem: ženska naj iz salona odide bolj kot ona sama, ne manj.
+              Argania studio je frizerski studio v Ljubljani, ki ga vodi Jasminka Bašić. Studio
+              deluje od leta 2016.
             </p>
           </div>
           <div className="overflow-hidden rounded-[2rem] border border-border/60">
             <img
               src={interiorImage}
-              alt="Topel, rožnato obarvan interier Salona Lipa"
+              alt="Notranjost frizerskega studia"
               className="aspect-[4/3] w-full object-cover"
               loading="eager"
             />
@@ -98,16 +84,15 @@ function AboutPage() {
       {/* Story */}
       <section className="mx-auto max-w-3xl px-5 py-20 text-center sm:px-8 lg:py-28">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-          Kako se je začelo
+          Moj pristop
         </p>
         <h2 className="mt-4 font-display text-3xl leading-snug text-foreground sm:text-4xl">
-          „Hotela sem sobo, kjer ima frizerska čas — in ženska v stolu brez pritiska."
+          Pričeska, ki vam ustreza tudi doma.
         </h2>
         <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-          Tako Lipa opisuje prve mesece. Stol je ostal. Pravilo tudi. V desetletje smo zrasli v
-          majhen, skrben atelje — šest stolov, barvni pult, soba za tretmaje in ekipa frizerk,
-          izurjenih, da slišijo lase, ki ga opišeš, in lase, ki ga misliš. Obdržali smo tudi mehko
-          stikalo in čaj.
+          Ker delam sama, se lahko vsaki stranki posvetim v celoti. Najprej se pogovoriva o vaših
+          željah, navadah in stanju las, nato predlagam striženje, barvanje ali nego, ki vam bo
+          ustrezala. Svetujem vam tudi, kako lase urediti doma.
         </p>
       </section>
 
@@ -116,11 +101,9 @@ function AboutPage() {
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              V kaj verjamemo
+              Kako delam
             </p>
-            <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">
-              Tri majhna pravila
-            </h2>
+            <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">Tri načela</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {values.map((v) => (
@@ -142,12 +125,10 @@ function AboutPage() {
       {/* Team */}
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Roke</p>
-          <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">
-            Spoštaj tvoje frizerske
-          </h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Kdo sem</p>
+          <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">Spoznajte me</h2>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-sm gap-8">
           {team.map((member) => (
             <figure
               key={member.name}
@@ -172,7 +153,7 @@ function AboutPage() {
           <div className="overflow-hidden rounded-[2rem] border border-border/60">
             <img
               src={stylistImage}
-              alt="Frizerska v Salon Lipa oblikuje lase gostje"
+              alt="Frizerka oblikuje lase stranki"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />
@@ -182,18 +163,17 @@ function AboutPage() {
               Prostor
             </p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-              Toplo stikalo, mehki toni, brez naglice.
+              Prijeten prostor, brez naglice.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Skriti ob Rožni ulici je naš atelje vse loke, medenina in rožnato — miren kot žep
-              stran od avenije. Privij se s čajem, pusti telefon z grmi navzdol in pusti, da je ura
-              tvoja.
+              Studio najdete na Grablovičevi ulici 54 v Ljubljani. Med obiskom se lahko sprostite,
+              saj je ta čas namenjen samo vam.
             </p>
             <Link
               to="/book"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Obišči nas
+              Rezervirajte termin
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
