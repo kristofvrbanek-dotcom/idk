@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Clock, Instagram, Mail, MapPin, Phone, Scissors } from "lucide-react";
+import { Clock, Instagram, MapPin, Phone, Scissors } from "lucide-react";
 
 const hours = [
   { day: "Ponedeljek", time: "Zaprto" },
@@ -34,13 +34,6 @@ export function SiteFooter() {
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="mailto:zivjo@salonlipa.si"
-                aria-label="E-pošta"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-              >
-                <Mail className="h-4 w-4" />
               </a>
             </div>
           </div>

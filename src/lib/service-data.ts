@@ -33,7 +33,7 @@ export const services: Service[] = [
     calendarId: "zcSaUB20E0hanvdDYHKZ",
     durations: [
       { id: "cut-45", label: "Osvežitev pričeske", minutes: 45, price: 75 },
-      { id: "cut-75", label: "Striženje", minutes: 75, price: 120 },
+      { id: "cut-75", label: "Striženje in sušenje", minutes: 75, price: 120 },
       {
         id: "cut-105",
         label: "Striženje in oblikovanje",
