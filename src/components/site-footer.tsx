@@ -2,10 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Clock, Instagram, MapPin, Phone, Scissors } from "lucide-react";
 
 const hours = [
-  { day: "Ponedeljek", time: "Zaprto" },
-  { day: "Torek – Petek", time: "9:00 — 19:00" },
-  { day: "Sobota", time: "9:00 — 18:00" },
-  { day: "Nedelja", time: "10:00 — 16:00" },
+  { day: "Ponedeljek – Sobota", time: "7:00 — 20:00" },
+  { day: "Nedelja", time: "Zaprto" },
 ];
 
 export function SiteFooter() {

@@ -89,9 +89,9 @@ function Index() {
               Frizerski studio · Ljubljana
             </span>
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-              Lasje, v katerih
+              Vaši lasje,
               <br />
-              <span className="text-primary">se dobro počutite.</span>
+              <span className="text-primary">v dobrih rokah.</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
               V Argania studiu vas čaka striženje, barvanje in nega las brez hitenja. Vzamem si čas,

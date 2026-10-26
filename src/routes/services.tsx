@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Clock, Scissors } from "lucide-react";
+import { ArrowRight, Check, Clock, Phone, Scissors } from "lucide-react";
 import { services, formatPrice, formatMinutes, type Service } from "@/lib/service-data";
 
 export const Route = createFileRoute("/services")({
@@ -71,7 +71,7 @@ function ServicesPage() {
             {[
               {
                 title: "Posveti",
-                body: "Vsako barvanje in striženje se začne s pogovorom. Če barvate prvič, lahko rezervirate brezplačen 15-minutni posvet.",
+                body: "Vsako barvanje in striženje se začne s pogovorom. Če ne veste, katero storitev izbrati, me pokličite. Svetovanje je brezplačno.",
               },
               {
                 title: "Odpoved termina",
@@ -92,15 +92,15 @@ function ServicesPage() {
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-3 rounded-[1.5rem] border border-border/60 bg-card p-8 text-center sm:flex-nowrap">
             <p className="flex-1 self-center text-lg text-foreground">
-              Ne veste, katero storitev izbrati? Pomagam vam pri izbiri.
+              Ne veste, katero storitev izbrati? Pokličite me in svetovala vam bom.
             </p>
-            <Link
-              to="/book"
+            <a
+              href="tel:+38670806246"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Rezervirajte posvet
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              <Phone className="h-4 w-4" />
+              Pokličite 070 806 246
+            </a>
           </div>
         </div>
       </section>

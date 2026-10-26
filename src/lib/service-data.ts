@@ -25,81 +25,70 @@ export const services: Service[] = [
   {
     id: "signature-cut",
     name: "Striženje",
-    tagline: "Striženje in oblikovanje",
+    tagline: "Po vaših željah",
     description:
-      "Striženje, prilagojeno obliki obraza, strukturi las in vašemu vsakdanu. Začneva s posvetom, končava z oblikovanjem in nasveti, kako pričesko urediti doma.",
+      "Striženje po vaših željah, prilagojeno obliki obraza in vrsti las. Na koncu lase sfeniram in vam svetujem, kako jih urediti doma.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/e699c019-9546-4999-845e-df4e5463d09c.png",
     calendarId: "zcSaUB20E0hanvdDYHKZ",
     durations: [
-      { id: "cut-45", label: "Osvežitev pričeske", minutes: 45, price: 75 },
-      { id: "cut-75", label: "Striženje in sušenje", minutes: 75, price: 120 },
+      { id: "cut-45", label: "Kratki lasje", minutes: 45, price: 75 },
+      { id: "cut-75", label: "Srednje dolgi in dolgi lasje", minutes: 75, price: 120 },
       {
         id: "cut-105",
-        label: "Striženje in oblikovanje",
+        label: "Striženje in fen frizura",
         minutes: 105,
         price: 165,
       },
     ],
-    includes: [
-      "Posvet",
-      "Umivanje in masaža lasišča",
-      "Striženje",
-      "Oblikovanje in nasveti za doma",
-    ],
+    includes: ["Pogovor o željah", "Umivanje las", "Striženje", "Feniranje in nasveti za doma"],
   },
   {
     id: "lived-in-color",
     name: "Barvanje",
-    tagline: "Balayage in barvanje las",
+    tagline: "Barvanje in prameni",
     description:
-      "Naravni prehodi barve, ki lepo zrastejo in ne zahtevajo pogostega obnavljanja. Odtenek izbereva skupaj glede na vašo naravno barvo in polt.",
+      "Barvanje izrastka, celih las ali naravni prameni (balayage). Odtenek izbereva skupaj, da vam bo lepo pristajal.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/da199502-a8ce-4f18-8a70-d55c26b716ab.png",
     calendarId: "nJBezo5OzBQplg8jzXzb",
     durations: [
       { id: "color-60", label: "Barvanje izrastka", minutes: 60, price: 90 },
-      { id: "color-90", label: "Toniranje in sijaj", minutes: 90, price: 150 },
+      { id: "color-90", label: "Barvanje celih las", minutes: 90, price: 150 },
       {
         id: "color-120",
-        label: "Balayage in toniranje",
+        label: "Naravni prameni (balayage)",
         minutes: 120,
         price: 220,
       },
     ],
-    includes: [
-      "Posvet o barvi",
-      "Nanos barve",
-      "Toniranje",
-      "Nega za zaščito las",
-      "Oblikovanje pričeske",
-    ],
+    includes: ["Pogovor o barvi", "Barvanje", "Nega po barvanju", "Feniranje"],
   },
   {
     id: "the-ritual",
     name: "Nega las",
-    tagline: "Globinska nega in obnova",
+    tagline: "Za suhe in poškodovane lase",
     description:
-      "Za suhe, poškodovane ali barvane lase. Globinska nega, masaža lasišča in skrbno sušenje vrnejo lasem mehkobo in sijaj.",
+      "Za suhe, poškodovane ali barvane lase. Maska, masaža lasišča in feniranje vrnejo lasem mehkobo in sijaj.",
     image:
       "https://vibe.filesafe.space/1792471744635170663/assets/6d046731-c34c-4a87-ac20-f21908200673.png",
     calendarId: "GODrhmBDRdxGIPyPUmju",
     durations: [
-      { id: "ritual-45", label: "Hitra nega", minutes: 45, price: 55 },
-      { id: "ritual-60", label: "Obnovitvena nega", minutes: 60, price: 95 },
+      { id: "ritual-45", label: "Osnovna nega", minutes: 45, price: 55 },
+      { id: "ritual-60", label: "Nega z masažo lasišča", minutes: 60, price: 95 },
       {
         id: "ritual-90",
-        label: "Nega s keratinom",
+        label: "Keratinska nega",
         minutes: 90,
         price: 150,
       },
     ],
     includes: [
       "Pregled lasišča",
-      "Globinska maska",
-      "Vlaženje s paro",
-      "Obnovitveni ali keratinski nanos",
-      "Sušenje in oblikovanje",
+      "Maska za lase",
+      "Masaža lasišča",
+      "Keratin (pri keratinski negi)",
+      "Feniranje",
     ],
   },
 ];
