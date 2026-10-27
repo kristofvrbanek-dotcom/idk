@@ -56,23 +56,24 @@ const galleryImages = [
   },
 ];
 
+// PRIMERI ZA PROTOTIP: pred javno objavo zamenjaj s pravimi mnenji strank.
 const testimonials = [
   {
     quote:
-      "Nikoli še nisem bila bolj sama pri sebi, ko sem stopila iz salona. Lipa me je poslušala — in mi dala strižo, ki je nisem znala prositi.",
-    name: "Mariana D.",
+      "Končno frizerka, ki res posluša, kaj želim. Pričeska je bila točno taka, kot sem si jo predstavljala, in jo zlahka uredim tudi sama.",
+    name: "Maja K.",
     detail: "Striženje",
   },
   {
     quote:
-      "Balayage zraste tako mehko, da stalno pozabim, da bi morala nazaj. To je tista čarovnija. (Seveda pa vseeno pridem.)",
-    name: "Priya S.",
+      "Barva je lepa in naravna, izrastek se skoraj ne vidi. Jasminka mi je svetovala tudi, kako naj lase negujem doma.",
+    name: "Nina P.",
     detail: "Barvanje",
   },
   {
     quote:
-      "Po ostri zimi mi je Ritual vrnil lase v življenje. Masaža lasišča je sama po sebi vredna cene.",
-    name: "Eloise T.",
+      "Po negi so bili lasje mehki in sijoči kot že dolgo ne. Prijetno vzdušje in nobenega hitenja.",
+    name: "Tina H.",
     detail: "Nega las",
   },
 ];
